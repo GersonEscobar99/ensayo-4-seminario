@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{csquotes}
+\usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
+\usepackage{times}
+\usepackage{geometry}
+\geometry{letterpaper, margin=2.4cm}
+
+\addbibresource{referencias_kubernetes.bib}
+
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{0pt}  
+\renewcommand{\baselinestretch}{1.0}
+
+\title{\textbf{\MakeUppercase{KUBERNETES}}}
+\author{\textit{G. M. Escobar Aguilar}\\
+\textit{7690-20-3975 Universidad Mariano Gálvez}\\
+\textit{Seminario de tecnologías de información}\\
+\textit{gescobara3@miumg.edu.gt}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\textbf{2. Resúmen}  
+\\
+Kubernetes es una plataforma de código abierto diseñada para automatizar el despliegue, la gestión y la escalabilidad de aplicaciones en contenedores. Este artículo presenta un análisis de sus componentes esenciales, ventajas y retos de implementación. Se abordan aspectos como su arquitectura basada en nodos, el rol del plano de control, la gestión de pods y servicios, así como su impacto en la orquestación moderna. El estudio destaca cómo Kubernetes facilita la portabilidad entre distintos entornos, ya sea en la nube pública, privada o híbrida, consolidándose como estándar en la industria. También se discuten las limitaciones y el esfuerzo de aprendizaje que requiere su uso. En conclusión, Kubernetes constituye una herramienta fundamental para organizaciones que buscan robustez, flexibilidad y eficiencia en la gestión de infraestructura de software moderna.
+
+\textbf{3. Palabras claves:}  
+\\
+Kubernetes, contenedores, orquestación, escalabilidad, automatización
+
+\textbf{4. Desarrollo del tema}  
+\\
+Kubernetes, creado por Google y actualmente administrado por la Cloud Native Computing Foundation (CNCF), surgió como respuesta a la necesidad de gestionar de manera eficiente aplicaciones distribuidas en contenedores. Su principal función es orquestar contenedores, asegurando que las aplicaciones se ejecuten de manera fiable y escalable.  
+
+La arquitectura de Kubernetes se compone de un \textbf{plano de control} (control plane), encargado de gestionar el estado deseado del clúster, y un conjunto de \textbf{nodos de trabajo} (worker nodes), donde se ejecutan los contenedores dentro de pods. Los principales componentes incluyen:  
+- \textbf{API Server:} interfaz de comunicación con los usuarios y componentes internos.  
+- \textbf{Scheduler:} decide en qué nodo se ejecutarán los pods.  
+- \textbf{Controller Manager:} supervisa el estado del sistema y aplica cambios cuando es necesario.  
+- \textbf{Kubelet:} agente que corre en cada nodo, encargado de ejecutar y monitorear contenedores.  
+
+Entre sus ventajas se encuentran la portabilidad entre diferentes proveedores de nube, la escalabilidad automática, la tolerancia a fallos y la posibilidad de implementar actualizaciones sin interrupciones. Sin embargo, Kubernetes también presenta desafíos, como su complejidad inicial y la necesidad de herramientas adicionales para monitoreo, seguridad y gestión avanzada.
+
+Ejemplos de uso exitoso incluyen empresas de streaming, comercio electrónico y banca digital, que aprovechan Kubernetes para manejar cargas variables y garantizar disponibilidad global.
+
+\textbf{5. Observaciones y comentarios}  
+\\
+Kubernetes ha revolucionado la administración de aplicaciones en contenedores, pero no es una solución mágica. Su adopción requiere personal especializado, inversión en herramientas complementarias y una cultura orientada a DevOps. Aun así, su valor estratégico es innegable en entornos modernos.
+
+\textbf{6. Conclusiones}  
+\\
+1. Kubernetes es el estándar de facto para la orquestación de contenedores en la industria.  
+2. Su arquitectura modular permite escalabilidad y resiliencia en entornos distribuidos.  
+3. La curva de aprendizaje es un reto que debe enfrentarse con capacitación y buenas prácticas.  
+4. Su implementación correcta habilita portabilidad y eficiencia operativa en nubes híbridas o multicloud.  
+
+\textbf{7. Bibliografía}  
+\\
+Burns, B., Beda, J., & Hightower, K. (2019). Kubernetes: Up and Running (2.a ed.). O’Reilly Media.
+\\
+Cloud, G. (2023). Kubernetes Basics. https://cloud.google.com/kubernetes-engine/docs/concepts/
+\\
+Foundation, C. N. C. (2023). Kubernetes Documentation. https://kubernetes.io/docs/
+
+
+\vspace{0.5cm}
+\noindent URL del repositorio Git: \texttt{https://github.com/usuario/repositorio-articulos}
+
+\end{document}
