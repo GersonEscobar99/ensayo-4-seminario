@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{csquotes}
+\usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
+\usepackage{times}
+\usepackage{geometry}
+\geometry{letterpaper, margin=2.4cm}
+
+\addbibresource{referencias_orquestacion.bib}
+
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{0pt}  
+\renewcommand{\baselinestretch}{1.0}
+
+\title{\textbf{\MakeUppercase{ORQUESTACION DE SERVIDORES}}}
+\author{\textit{G. M. Escobar Aguilar}\\
+\textit{7690-20-3975 Universidad Mariano Gálvez}\\
+\textit{Seminario de tecnologías de información}\\
+\textit{Email: gescobar@universidad.edu}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\textbf{2. Resúmen}  
+\\
+La administración de servidores ha evolucionado desde procesos manuales hasta enfoques completamente automatizados. La orquestación de servidores surge como una práctica que integra herramientas y metodologías para coordinar la configuración, el despliegue, el monitoreo y la actualización de múltiples sistemas de manera eficiente. El presente artículo expone los fundamentos de la orquestación, sus objetivos principales, las herramientas más representativas y las ventajas que ofrece frente a los métodos tradicionales. A partir del análisis realizado, se resalta la importancia de la automatización para garantizar escalabilidad, resiliencia y consistencia en entornos modernos. Asimismo, se discuten los desafíos asociados a la adopción de estas tecnologías, como la curva de aprendizaje y la necesidad de una cultura organizacional orientada a la automatización. Los resultados de esta revisión permiten concluir que la orquestación de servidores no solo mejora la eficiencia técnica, sino que también constituye un elemento clave para la competitividad empresarial en un mercado digital cada vez más exigente.
+
+\textbf{3. Palabras claves:} 
+\\
+Orquestación, servidores, automatización, infraestructura, escalabilidad
+
+\textbf{4. Desarrollo del tema}  
+\\
+La orquestación de servidores consiste en la automatización de tareas de infraestructura que anteriormente requerían intervención manual. Esto incluye actividades como la instalación de aplicaciones, la configuración de sistemas operativos, la gestión de redes y el aprovisionamiento de recursos de hardware o nube.  
+
+El objetivo principal es lograr que un conjunto de servidores funcione de forma coordinada, como si fueran una sola unidad lógica. De esta manera, se minimizan los errores humanos, se reduce el tiempo de despliegue y se incrementa la eficiencia operativa (\cite{hussain2021}).  
+
+Las herramientas de orquestación se apoyan en el concepto de infraestructura como código. Esto significa que las configuraciones y dependencias se describen en archivos de texto legibles y versionables. Entre las soluciones más utilizadas se encuentran:  
+- \textbf{Ansible:} destaca por su simplicidad y uso de archivos YAML para describir configuraciones.  
+- \textbf{Puppet y Chef:} pioneras en la automatización de infraestructura, ampliamente usadas en entornos empresariales.  
+- \textbf{Terraform:} centrada en la provisión de recursos en la nube, compatible con distintos proveedores.  
+
+En entornos de contenedores, Kubernetes se ha convertido en la plataforma dominante, llevando la orquestación a un nivel más granular y dinámico. Su capacidad de escalar aplicaciones automáticamente, redistribuir cargas y autocomponerse ante fallos lo convierten en un estándar de facto.  
+
+Un ejemplo real se observa en aplicaciones de comercio electrónico. Durante campañas de alto tráfico, como el Black Friday, la orquestación permite aumentar automáticamente la cantidad de servidores disponibles para manejar la carga, evitando caídas del sistema y garantizando la experiencia del usuario.
+
+\textbf{5. Observaciones y comentarios}  
+\\
+La orquestación de servidores ha transformado el paradigma de la administración de infraestructura. Si bien las herramientas disponibles ofrecen grandes beneficios, requieren personal capacitado y procesos de integración adecuados. La transición hacia entornos orquestados supone una inversión inicial significativa, pero sus beneficios a mediano y largo plazo justifican la adopción.
+
+\textbf{6. Conclusiones}  
+\\
+1. La orquestación de servidores automatiza tareas críticas y reduce la dependencia de la intervención manual.  
+2. Su implementación mejora la escalabilidad y resiliencia de los sistemas, optimizando el uso de recursos.  
+3. El éxito de la orquestación depende tanto de la tecnología como de la preparación del equipo humano.  
+4. En un mundo digital altamente competitivo, constituye un elemento estratégico para las organizaciones.  
+
+\textbf{7. Bibliografía}  
+\\
+Foundation, C. N. C. (2023). Kubernetes Documentation. https://kubernetes.io/docs/
+\\
+HashiCorp. (2023). Terraform Documentation. https://developer.hashicorp.com/terraform/docs
+\\
+Hussain, M. (2021). Infrastructure as Code and Server Orchestration. Packt Publishing.
+
+\vspace{0.5cm}
+\noindent URL del repositorio Git: \texttt{https://github.com/GersonEscobar99/ensayo-4-seminario}
+
+\end{document}
