@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{csquotes}
+\usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
+\usepackage{times}
+\usepackage{geometry}
+\usepackage{titling}
+\setlength{\droptitle}{-2cm}
+\geometry{letterpaper, margin=2.4cm}
+
+\addbibresource{referencias_microservicios.bib}
+
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{0pt}  
+\renewcommand{\baselinestretch}{1.0}
+
+\title{\textbf{\MakeUppercase{MICROSERVICIOS}}}
+\author{\textit{G. M. Escobar Aguilar}\\
+\textit{7690-20-3975 Universidad Mariano Gálvez}\\
+\textit{Seminario de tecnologías de información}\\
+\textit{gescobara3@miumg.edu.gt}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\textbf{2. Resúmen}  
+\\
+Los microservicios constituyen un estilo arquitectónico que divide una aplicación en componentes pequeños e independientes, desplegables de forma autónoma y comunicados mediante interfaces bien definidas. Este artículo describe sus fundamentos, ventajas, desventajas y casos de uso. Se expone cómo los microservicios responden a la necesidad de escalabilidad, resiliencia y flexibilidad en el desarrollo moderno, en contraste con la rigidez de los sistemas monolíticos. Asimismo, se analizan los retos que conlleva su adopción, como la complejidad en la comunicación entre servicios y la necesidad de herramientas de monitoreo y orquestación. En conclusión, los microservicios representan un modelo eficiente para aplicaciones distribuidas, pero su implementación requiere madurez técnica y una estrategia clara de integración.
+
+\textbf{3. Palabras claves:}  
+\\
+Microservicios, arquitectura de software, escalabilidad, resiliencia, API
+
+\textbf{4. Desarrollo del tema}  
+\\
+La arquitectura de software tradicional basada en monolitos concentra toda la lógica en un solo sistema. Aunque esta aproximación puede resultar sencilla al inicio, limita la escalabilidad y complica la implementación de cambios.  
+
+Los \textbf{microservicios} buscan resolver estas limitaciones al dividir la aplicación en módulos independientes. Cada microservicio se encarga de una funcionalidad específica, tiene su propia base de datos y puede desplegarse sin afectar al resto del sistema (Newman, 2021). La comunicación entre ellos se realiza generalmente a través de \textit{APIs REST}, \textit{GraphQL} o mensajería asíncrona como \textit{Kafka}.  
+
+Entre sus beneficios se encuentran:  
+- Escalabilidad individual de cada servicio según la demanda.  
+- Independencia tecnológica, ya que cada servicio puede desarrollarse en un lenguaje distinto.  
+- Mayor resiliencia, pues una falla en un servicio no implica la caída de todo el sistema.  
+- Entregas continuas y despliegues más ágiles.  
+
+No obstante, los microservicios también plantean desafíos:  
+- Complejidad en la comunicación y coordinación entre múltiples servicios.  
+- Necesidad de implementar mecanismos de seguridad y autenticación distribuidos.  
+- Mayor dificultad en el monitoreo y rastreo de errores.  
+- Costos de infraestructura más elevados que en un monolito.  
+
+Empresas como Netflix, Amazon y Spotify han adoptado este modelo para soportar cargas globales y ciclos de innovación acelerados. Sin embargo, para proyectos pequeños, los microservicios pueden ser un exceso de complejidad.
+
+\textbf{5. Observaciones y comentarios}  
+\\
+Los microservicios no son una solución universal. Antes de adoptarlos, se debe evaluar el tamaño del proyecto, la experiencia del equipo y la capacidad de inversión en infraestructura. Una estrategia frecuente es comenzar con un monolito bien diseñado y, conforme crece la aplicación, migrar gradualmente hacia microservicios.
+
+\textbf{6. Conclusiones}  
+\\
+1. Los microservicios ofrecen flexibilidad y escalabilidad en aplicaciones distribuidas.  
+2. Su implementación requiere madurez técnica y soporte en herramientas de monitoreo y orquestación.  
+3. No son adecuados para todo proyecto, especialmente los de pequeña escala.  
+4. Constituyen un modelo arquitectónico clave en organizaciones digitales con alta demanda de innovación.  
+
+\textbf{7. Bibliografía}  
+\\
+Blog, N. T. (2023). Evolution to Microservices Architecture. https://netflixtechblog.com/
+\\
+Fowler, M. (2023). Microservices Resource Guide. https://martinfowler.com/microservices/
+\\
+Newman, S. (2021). Building Microservices: Designing Fine-Grained Systems (2.a ed.).
+
+
+\vspace{0.5cm}
+\noindent URL del repositorio Git: \texttt{https://github.com/GersonEscobar99/ensayo-4-seminario}
+
+\end{document}

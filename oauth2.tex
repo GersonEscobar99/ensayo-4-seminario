@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{csquotes}
+\usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
+\usepackage{times}
+\usepackage{geometry}
+\usepackage{titling}
+\setlength{\droptitle}{-2cm}
+\geometry{letterpaper, margin=2.4cm}
+
+\addbibresource{referencias_oauth2.bib}
+
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{0pt}  
+\renewcommand{\baselinestretch}{1.0}
+
+\title{\textbf{\MakeUppercase{OAUTH 2.0}}}
+\author{\textit{G. M. Escobar Aguilar}\\
+\textit{7690-20-3975 Universidad Mariano Gálvez}\\
+\textit{Seminario de tecnologías de información}\\
+\textit{gescobara3@miumg.edu.gt}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\textbf{2. Resúmen}  
+\\
+OAuth 2.0 es un marco de autorización ampliamente adoptado que permite a las aplicaciones obtener acceso limitado a recursos protegidos sin necesidad de exponer credenciales sensibles. Este artículo describe los principios de OAuth 2.0, sus principales roles y flujos de autorización, así como las ventajas y desafíos que plantea su implementación. Se discuten casos de uso comunes en aplicaciones web y móviles, junto con las implicaciones en materia de seguridad y experiencia de usuario. En conclusión, OAuth 2.0 se presenta como un estándar clave en el ecosistema digital actual, fundamental para garantizar accesos controlados en un entorno cada vez más interconectado.
+
+\textbf{3. Palabras claves:}  
+\\
+OAuth 2.0, autorización, autenticación, seguridad, API
+
+\textbf{4. Desarrollo del tema}  
+\\
+OAuth 2.0, definido por la IETF en el RFC 6749, se utiliza como un protocolo de autorización que permite a los usuarios otorgar acceso limitado a aplicaciones de terceros sin compartir sus contraseñas. En lugar de entregar credenciales directas, el sistema utiliza \textbf{tokens de acceso} de corta duración, que pueden renovarse mediante \textbf{tokens de actualización} (Hardt, 2012).  
+
+Los roles principales en OAuth 2.0 son:  
+- \textbf{Resource Owner (propietario del recurso):} el usuario que concede acceso a sus datos.  
+- \textbf{Client (cliente):} la aplicación que solicita acceso.  
+- \textbf{Authorization Server (servidor de autorización):} valida la identidad y emite tokens.  
+- \textbf{Resource Server (servidor de recursos):} contiene los datos protegidos y valida los tokens.  
+
+Existen distintos flujos de autorización según el tipo de aplicación:  
+- \textbf{Authorization Code Flow:} el más seguro, utilizado por aplicaciones web con servidor backend.  
+- \textbf{Implicit Flow:} pensado para aplicaciones de una sola página, aunque actualmente se desaconseja por motivos de seguridad.  
+- \textbf{Resource Owner Password Flow:} otorga acceso directo usando credenciales del usuario, pero se limita a casos muy específicos.  
+- \textbf{Client Credentials Flow:} usado cuando una aplicación accede a sus propios recursos, sin un usuario humano.  
+
+OAuth 2.0 se ha convertido en un estándar de facto en servicios como Google, Facebook o GitHub, ya que permite integrar autenticación y autorización en ecosistemas complejos de manera flexible y relativamente sencilla. Sin embargo, no está exento de riesgos, ya que una implementación incorrecta puede generar vulnerabilidades graves, como la exposición de tokens.
+
+\textbf{5. Observaciones y comentarios}  
+\\
+OAuth 2.0 no es un protocolo de autenticación en sí mismo, sino de autorización. Para autenticación suele complementarse con \textbf{OpenID Connect}, que agrega una capa de identidad. En la práctica, muchas organizaciones confunden ambos conceptos, lo cual puede generar configuraciones inseguras.
+
+\textbf{6. Conclusiones}  
+\\
+1. OAuth 2.0 es un marco de autorización esencial para aplicaciones modernas conectadas a internet.  
+2. Sus flujos de autorización permiten adaptar la seguridad a distintos escenarios de uso.  
+3. Una implementación deficiente puede comprometer la seguridad, por lo que requiere buenas prácticas y auditorías constantes.  
+4. Combinado con OpenID Connect, constituye la base de autenticación y autorización en ecosistemas distribuidos.  
+
+\textbf{7. Bibliografía}  
+\\
+Auth0. (2023). OAuth 2.0 and OpenID Connect Overview. https ://auth0.com/docs/get-started/authentication-and-authorization-flow
+\\
+Hardt, D. (2012). The OAuth 2.0 Authorization Framework (inf. t´ec. N.o RFC 6749). Internet Engi-neering Task Force (IETF). https://www.rfc-editor.org/rfc/rfc6749
+\\
+Inc., O. (2023). What is OAuth 2.0? https://www.okta.com/identity-101/what-is-oauth-2-0/
+
+\vspace{0.5cm}
+\noindent URL del repositorio Git: \texttt{https://github.com/GersonEscobar99/ensayo-4-seminario}
+
+\end{document}

@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{csquotes}
+\usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
+\usepackage{times}
+\usepackage{geometry}
+\usepackage{titling}
+\setlength{\droptitle}{-2cm}
+\geometry{letterpaper, margin=2.4cm}
+
+\addbibresource{referencias_12factor.bib}
+
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{0pt}  
+\renewcommand{\baselinestretch}{1.0}
+
+\title{\textbf{\MakeUppercase{12-FACTOR APPLICATION}}}
+\author{\textit{G. M. Escobar Aguilar}\\
+\textit{7690-20-3975 Universidad Mariano Gálvez}\\
+\textit{Seminario de tecnologías de información}\\
+\textit{gescobara3@miumg.edu.gt}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\textbf{2. Resúmen}  
+\\
+El modelo 12-Factor Application es una metodología para desarrollar aplicaciones modernas y nativas de la nube. Este enfoque busca garantizar escalabilidad, portabilidad y resiliencia en entornos distribuidos. El presente artículo describe cada uno de los doce factores, su importancia en la implementación de servicios en la nube y cómo influyen en el ciclo de vida del software. Se destacan ventajas como la estandarización, la facilidad de despliegue y la reducción de dependencias externas. Asimismo, se analizan los retos de adoptar este modelo en proyectos con arquitecturas heredadas. En conclusión, el enfoque de doce factores constituye una guía práctica y probada para diseñar aplicaciones confiables en entornos de computación en la nube.
+
+\textbf{3. Palabras claves:}  
+\\
+12-Factor Application, servicios en la nube, escalabilidad, portabilidad, DevOps
+
+\textbf{4. Desarrollo del tema}  
+\\
+El manifiesto 12-Factor fue desarrollado por ingenieros de Heroku en 2011 con el objetivo de definir prácticas estándar para el desarrollo de aplicaciones que aprovechen al máximo los entornos en la nube (Wiggins, 2017).  
+
+Los doce factores son:  
+1. \textbf{Código base:} una sola base de código con control de versiones.  
+2. \textbf{Dependencias:} declaración explícita de todas las dependencias.  
+3. \textbf{Configuración:} almacenada en variables de entorno, no en el código.  
+4. \textbf{Servicios de respaldo:} tratados como recursos externos.  
+5. \textbf{Compilación, lanzamiento y ejecución:} fases claramente separadas.  
+6. \textbf{Procesos:} ejecución en entornos sin estado, compartiendo nada.  
+7. \textbf{Asignación de puertos:} cada servicio expone puertos para comunicación.  
+8. \textbf{Concurrencia:} escalado a través de procesos, no de hilos.  
+9. \textbf{Desechabilidad:} procesos que pueden iniciarse y terminarse rápidamente.  
+10. \textbf{Paridad entre entornos:} minimizar diferencias entre desarrollo, pruebas y producción.  
+11. \textbf{Logs:} tratados como flujos de eventos.  
+12. \textbf{Procesos de administración:} ejecutados como tareas puntuales y aisladas.  
+
+La aplicación de estos principios permite crear software portable entre distintos proveedores de nube (AWS, Azure, GCP) y facilita el escalado horizontal. Sin embargo, la transición hacia el modelo 12-Factor puede ser compleja en sistemas monolíticos heredados.
+
+Ejemplos de uso incluyen plataformas SaaS y microservicios, donde la modularidad y la independencia entre procesos resultan esenciales para garantizar continuidad operativa.
+
+\textbf{5. Observaciones y comentarios}  
+\\
+El modelo 12-Factor no es una norma obligatoria, sino una guía de buenas prácticas. No todas las aplicaciones requieren implementarlo en su totalidad, pero adoptar al menos algunos de sus principios mejora la resiliencia y la adaptabilidad de los sistemas en la nube.
+
+\textbf{6. Conclusiones}  
+\\
+1. El modelo 12-Factor constituye una metodología clave para construir aplicaciones nativas de la nube.  
+2. Facilita la escalabilidad, la portabilidad y la resiliencia de los sistemas distribuidos.  
+3. Su adopción completa es recomendable en nuevas aplicaciones, mientras que en sistemas heredados puede aplicarse de manera progresiva.  
+4. Representa un puente entre las prácticas de desarrollo tradicionales y la cultura DevOps moderna. 
+\\
+\textbf{7. Bibliografía}  
+\\
+Azure, M. (2023). Cloud Design Patterns and Practices. https://learn.microsoft.com/en-us/azure/architecture/patterns/
+\\
+Services, A. W. (2023). Best Practices for Building Cloud-Native Applications. https://aws.amazon.com/architecture/
+\\
+Wiggins, A. (2017). The Twelve-Factor App. Heroku Press. https://12factor.net/
+\printbibliography
+
+\vspace{0.5cm}
+\noindent URL del repositorio Git: \texttt{https://github.com/GersonEscobar99/ensayo-4-seminario}
+
+\end{document}
